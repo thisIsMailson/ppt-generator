@@ -5,7 +5,7 @@ from selenium.webdriver.firefox.options import Options
 from time import sleep
 from pptx import Presentation
 
-def generatePpt(event, context):
+def generatePpt():
     # Set up Firefox options to run headless (without opening a browser window)
     firefox_options = Options()
     firefox_options.headless = True
@@ -37,5 +37,5 @@ def generatePpt(event, context):
     # Save the PowerPoint presentation
     presentation.save("factsheet_motherson.pptx")
 
-    response = {"statusCode": 200, "message": event}
+    response = {"statusCode": 200, "message": 'generating ppt'}
     return response
